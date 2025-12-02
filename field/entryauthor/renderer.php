@@ -129,7 +129,7 @@ class datalynxfield_entryauthor_renderer extends datalynxfield_renderer {
         }
         $usermenu = array();
         foreach ($users as $userid => $user) {
-            $usermenu[$userid] = $user->lastname . ' ' . $user->firstname . ' (' . $user->email . ')';
+            $usermenu[$userid] = $user->firstname . ' ' . $user->lastname . ' (' . $user->email . ')';
         }
         $mform->addElement('select', $fieldname, null, $usermenu);
         $mform->setDefault($fieldname, $selected);
